@@ -1,0 +1,460 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@700&family=Signika&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Trirong&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* ---------------------- SECTION TITRE ---------------------- */
+
+    @font-face {
+        font-family: 'super_mario_256';
+        src: url("../font/SuperMario256.ttf");
+    }
+
+    body{
+        background-color: #E9EAEC;
+    }
+
+    .sec-titre{
+        height: 100%;
+        text-align: center;
+        background-image: url("../img/header-bg.png");
+        /*background-color: #0B0C0C;*/
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    nav {
+        top: 0%;
+        font-size: 1.5vw;
+        color: #E9EAEC;
+        font-family: 'Signika', sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 1vw 10%;
+    }
+
+    nav ul li{
+        list-style-type: none;
+        display: inline-block;
+        padding: 0.5vw 1vw;
+    }
+
+    nav ul li a{
+        color: #E9EAEC;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    nav ul li a:hover{
+        color: #E4B61A;
+        transition: 0.3s;
+    }
+
+    #contact button{
+        font-family: 'Signika', sans-serif;
+        font-size: 1.3vw;
+        color: #2A2E34;
+        margin-left: 1vw;
+        padding: 0.2vw 1vw;
+        background-color: #FBE134;
+        border: none;
+        border-radius: 2vw;
+        cursor: pointer;
+    }
+
+    #contact button:hover{
+        background-color: #E4B61A;
+        transition: 0.3s;
+    }
+
+    nav h3:hover{
+        color: #E4B61A;
+    }
+
+    #logo{
+        margin-top: 3.3vw;
+        margin-bottom: 1vw;
+        height: 10vw;
+        width: 10vw;
+
+        animation-duration: 3s;
+        animation-name: fondu; /*Lancer l'animation "clignoter" */
+        animation-iteration-count: 1; /*Le lancer à l'infini*/
+        transition: none;
+    }
+
+    #barberpole{
+        height: 3vw;
+        margin-right: auto;
+
+        animation-duration: 3s;
+        animation-name: clignoter; /*Lancer l'animation "clignoter" */
+        animation-iteration-count: infinite; /*Le lancer à l'infini*/
+        transition: none;
+    }
+
+    #grand-titre{
+        background:-webkit-linear-gradient(top, #FBE134 30%, #E4B61A 70%);
+        background-clip:text;
+        -webkit-background-clip:text;
+        color:transparent;
+        font-size: 5vw;
+        /*color: #FBE134;*/
+        font-family: 'super_mario_256';
+        
+        animation-duration: 3s;
+        animation-name: fondu;
+        animation-iteration-count: 1; 
+        transition: none;
+        
+    }
+
+    @keyframes clignoter { /* Création de l'animation "clignoter" */
+        /* L'animation passe l'opacité de visible à invisible pour faire clignoter */
+        0%   { opacity:0; }
+        40%  { opacity:1; }
+        100% { opacity:0; }
+    }
+
+    @keyframes fondu {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+    }
+
+    #sous-titre{
+        padding-bottom: 10vw;
+        font-size: 2vw;
+        color: #E4B61A;
+        font-family: 'Signika', sans-serif;
+
+        animation-duration: 5s;
+        animation-name: fondu;
+        animation-iteration-count: 1; 
+        transition: none;
+    }
+
+/* ---------------------- SECTION LOCALISATION ---------------------- */
+
+    .localisation{
+        margin-top: 2vw;
+        margin-left: 16.8%;
+        margin-bottom: 3vw;
+    }
+
+    #map{
+        width: 64vw;
+        height: 35vw;
+        border: 0.7vw double #FBE134;
+        position: relative;
+        z-index: 0;
+    }
+
+    iframe{
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+    }
+
+    .itineraire{
+        font-size: 1.5vw;
+        margin-top: 2vw;
+        margin-left: 26%;
+        z-index: 2;
+        position: absolute;
+        top: 141.15%;
+        left: -4%;
+
+        animation-duration: 2s;
+        animation-name: appear;
+        animation-iteration-count: 1; 
+        transition: none;
+    }
+
+    .streetview{
+        font-size: 1.5vw;
+        margin-left: 39%;
+        z-index: 2;
+        position: absolute;
+        top: 145%;
+        left: -7%;
+
+        animation-duration: 2s;
+        animation-name: appear;
+        animation-iteration-count: 1; 
+        transition: none;
+    }
+
+    @keyframes appear {
+        0% { visibility: hidden; }
+        100% { visibility: hidden; }
+    }
+
+    .localisation h3{
+        margin-left: 27%;
+        font-size: 3vw;
+        color: #0B0C0C;
+        font-family: 'Signika', sans-serif;
+    }
+
+/* ---------------------- SECTION PREVIEW ---------------------- */
+
+    .preview{
+        display: flex;
+        margin-left: 15%;
+    }
+
+    #tarifs-box{
+        width: 29.166666666666668vw;
+        height: 36.458333333333336vw;
+        margin: 2vw;
+        border: 0.7vw double #FBE134;
+    }
+
+    #img-tarifs-preview{
+        width: 29.166666666666668vw;
+        height: 36.458333333333336vw;
+        overflow: hidden;
+        position: relative;
+    }
+
+    #black_bg_opacity{
+        width: 29.166666666666668vw;
+        height: 36.458333333333336vw;
+        background-color: #0B0C0C;
+    }
+
+    #text-on-img-tar{
+        text-align: center;
+        font-size: 3vw;
+        color: #E9EAEC;
+        font-family: 'Signika', sans-serif;
+        position: absolute;
+        left: 30%;
+        top: 40%;
+        z-index: 1;
+    }
+
+    #text-on-img-cos{
+        text-align: center;
+        font-size: 3vw;
+        color: #E9EAEC;
+        font-family: 'Signika', sans-serif;
+        position: absolute;
+        left: 12%;
+        top: 40%;
+        z-index: 1;
+    }
+
+    #en-savoir-plus{
+        align-items: center;
+        background-image: linear-gradient(144deg,#FBE134, #E4B61A 50%,#c79b0c);
+        border: 0;
+        border-radius: 8px;
+        box-shadow: #0B0C0C 0 15px 30px -5px;
+        color: #0B0C0C;
+        padding: 0.5vw 1vw;
+        text-decoration: none;
+        cursor: pointer;
+        font-family: 'Signika', sans-serif;
+    }
+
+    #img-tarifs-preview img{
+        width: 100%;
+        height: 100%;
+        opacity: 30%;
+    }
+
+    #img-tarifs-preview img:hover{
+        opacity: 15%;
+        cursor: crosshair;
+    }
+
+    #cosmetique-box{
+        width: 29.166666666666668vw;
+        height: 36.458333333333336vw;
+        margin: 2vw;
+        border: 0.7vw double #FBE134;
+    }
+
+    #img-cosmetique-preview{
+        width: 29.166666666666668vw;
+        height: 36.458333333333336vw;
+        overflow: hidden;
+        position: relative;
+    }
+
+    #img-cosmetique-preview img{
+        width: 100%;
+        height: 100%;
+        opacity: 30%;
+    }
+
+    #img-cosmetique-preview img:hover{
+        opacity: 15%;
+        cursor: crosshair;   
+    }
+
+/* ---------------------- PIED DE PAGE ---------------------- */
+
+    .pied-de-page{
+        height: 35vh;
+        background-image: url("../img/footer-bg.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    footer{
+        padding-top: 1vw;
+        padding-bottom: 1vw;
+        text-align: center;
+        background-color: #0B0C0C;
+    }
+
+    footer span{
+        font-size: 0.8vw;
+        color: #E9EAEC;
+        font-family: 'Signika', sans-serif;
+    }
+
+    #fb{
+        margin-left: 45.5%;
+        margin-bottom: 13px;
+        margin-top: 8%;
+        cursor: pointer;
+    }
+
+    #ig{
+        margin-top: 8%;
+        cursor: pointer;
+    }
+
+/* ---------------------- GOOGLE REVIEW ---------------------- */
+
+.review{
+    margin-top: 5vw;
+}
+
+/* ---------------------- MEDIA QUERY (responsive) ---------------------- */
+
+    @media (max-width: 1200px) {
+
+        #barberpole{
+            display: none;
+        }
+        
+        nav{
+            justify-content: center;
+        }
+
+        li, header a, button{
+            font-size: 3vw;
+        }
+
+        #contact button{
+            font-size: 2.3vw;
+        }
+
+        .sec-titre{
+            padding-bottom: 18vw;
+            background-size: 100vw 63vw;
+        }
+
+        #logo{
+            height: 12vw;
+            width: 12vw;
+        }
+        
+        #grand-titre{
+            font-size: 7vw;
+        }
+        
+        #sous-titre{
+            font-size: 3vw;
+        }
+
+        .preview{
+            display: inherit;
+            margin-left: 4%;
+        }
+    
+        #tarifs-box{
+            width: 87.51vw;
+            height: 109.38vw;
+        }
+    
+        #img-tarifs-preview{
+            width: 87.51vw;
+            height: 109.38vw;
+        }
+    
+        #cosmetique-box{
+            width: 87.51vw;
+            height: 109.38vw;
+        }
+    
+        #img-cosmetique-preview{
+            width: 87.51vw;
+            height: 109.38vw;
+        }
+    
+        #black_bg_opacity{
+            width: 87.51vw;
+            height: 109.38vw;
+        }
+
+        #text-on-img-tar{
+            margin-bottom: 1vw;
+            font-size: 8vw;
+            left: 26%;
+            top: 40%;
+        }
+
+        #text-on-img-cos{
+            font-size: 8vw;
+            left: 15%;
+            top: 40%;
+        }
+
+        #en-savoir-plus{
+            margin-top: 2vw;
+            font-size: 5vw;
+            padding: 3vw 3.5vw;
+        }
+
+        .localisation{
+            margin-left: 5%;
+            margin-bottom: 5vw;
+        }
+    
+        #map{
+            width: 88vw;
+            height: 50vw;
+            margin-bottom: 2vw;
+        }
+    
+        .itineraire{
+            margin-top: 2vw;
+            margin-left: 10.8%;
+        }
+    
+        .streetview{
+            margin-left: 1vw;
+        }
+    
+        .localisation h3{
+            margin-left: 27%;
+            font-size: 3vw;
+            color: #0B0C0C;
+            font-family: 'Signika', sans-serif;
+        }
+
+        footer span{
+            font-size: 3vw;
+        }
+    }
